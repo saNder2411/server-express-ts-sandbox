@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response }  from 'express';
 import { router } from './routes/loginRoutes';
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
@@ -12,6 +12,6 @@ app.use(cookieSession({ keys: ['string'] }));
 app.use(router);
 app.use(AppRouter.getInstance());
 
-app.listen(3000, () => {
-  console.log('Listening on port 3000')
+app.listen(3001, () => {
+  console.log('Listening on port 3001')
 });
