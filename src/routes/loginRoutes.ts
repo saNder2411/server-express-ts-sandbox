@@ -16,6 +16,7 @@ function requiredAuth(req: Request, res: Response, next: NextFunction): void {
 
 const router = Router();
 
+
 router.post('/login', (req: RequestWithBody, res: Response) => {
   const { email, password } = req.body; 
 
@@ -48,7 +49,7 @@ router.get('/', (req: RequestWithBody, res: Response) => {
 });
 
 router.get('/logout', (req: RequestWithBody, res: Response) => {
-  req.session = undefined;
+  req.session = null;
   res.redirect('/');
 });
 
