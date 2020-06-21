@@ -5,7 +5,7 @@ import { get, controller } from './decorators';
 class LoginController {
 
   @get('/login')
-  getLogin(req: Request, res: Response) {
+  getLogin(req: Request, res: Response): void {
     res.send(`
       <form method="POST">
         <div>
